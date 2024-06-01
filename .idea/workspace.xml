@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3cf297a-34d1-4620-b181-86213e51e587" name="Changes" comment="Recreate project (https://github.com/lattecoff/hhapp_testing)&#10;Copies files from old project.&#10;Create new database and objects.">
-      <change afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/templates/create_research.html" afterDir="false" />
+    <list default="true" id="e3cf297a-34d1-4620-b181-86213e51e587" name="Changes" comment="Create drawing form and linking with viewes function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hhapp_testing_v2/hhapp_testing_v2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hhapp_testing_v2/hhapp_testing_v2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hhapp_testing_v2/research/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hhapp_testing_v2/research/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hhapp_testing_v2/research/templates/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/templates/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hhapp_testing_v2/research/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hhapp_testing_v2/research/templates/create_research.html" beforeDir="false" afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/templates/create_research.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hhapp_testing_v2/research/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hhapp_testing_v2/research/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,22 +73,20 @@
       <option name="project" value="LOCAL" />
       <updated>1716741158878</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create drawing form and linking with viewes function.">
+      <option name="closed" value="true" />
+      <created>1717246451628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717246451629</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Recreate project (https://github.com/lattecoff/hhapp_testing)&#10;Copies files from old project.&#10;Create new database and objects." />
-    <option name="LAST_COMMIT_MESSAGE" value="Recreate project (https://github.com/lattecoff/hhapp_testing)&#10;Copies files from old project.&#10;Create new database and objects." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hhapp_testing_v2/research/views.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Create drawing form and linking with viewes function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create drawing form and linking with viewes function." />
   </component>
 </project>

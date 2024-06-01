@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,20 @@
 <body>
     {{message}}
     <form action="{% url 'create_research' %}" method="post">
+        {% csrf_token %}
+
+        {% comment %}
+        {{ form.as_p }}
+        {% endcomment %}
+
+        {{ form.non_field.errors }}
+        {% for field in form %}
+        <div class="form-field">
+            {{ field.label_tag }}
+            {{ field }}
+        </div>
+        {% endfor %}
+
         <button type="submit">Create Research</button>
     </form>
 </body>

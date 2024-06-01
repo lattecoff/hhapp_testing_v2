@@ -1,16 +1,16 @@
 from django import forms
-from .models import ResearchRef
-from .models import Category
+from .models import ResearchRef, Refrigerator, Category
 
 
-# class ResearchRefForm(forms.ModelForm):
-#     class Meta:
-#         model = ResearchRef
-#         fields = ['device', 'describe', 'status', 'date_start', 'date_finish']
+class ResearchRefForm(forms.ModelForm):
+    class Meta:
+        model = ResearchRef
+        fields = ['device', 'describe', 'status', 'date_start', 'date_finish']
+        widgets = {
+            'device': forms.Select(),
+            'describe': forms.Textarea(attrs={'rows': 5,}),
+            'status': forms.Select(),
+            'date_start': forms.DateTimeInput(),
+            'date_finish': forms.DateTimeInput()
+        }
 
-class ResearchRefForm(forms.Form):
-    device = forms.CharField(max_length=150)
-    describe = forms.CharField()
-    status = forms.ModelChoiceField(queryset=Category.objects.all())
-    date_start = forms.DateField()
-    date_finish = forms.DateField()

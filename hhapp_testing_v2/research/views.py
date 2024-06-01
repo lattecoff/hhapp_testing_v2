@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
 # ----
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import Category, ResearchRef
 from .serializers import ResearchRefSerializer
 
@@ -47,10 +47,13 @@ def home(request):
 
 
 def create_research(request):
-    # if request.method == 'POST':
-    #     pass
-    # else:
-    #     form = ResearchRefForm()
+    if request.method == 'POST':
+        form = ResearchRefForm(request.POST)
+        if form.is_valid():
+            research = form.save()
+            return redirect(research)
+    else:
+        form = ResearchRefForm()
 
-    #return render(request, template_name='create_research.html', context={'hw',})
-    return render(request, template_name='create_research.html', context={'message': "Hello world", })
+    return render(request, template_name='create_research.html', context={'form': form,})
+    #return render(request, template_name='create_research.html', context={'message': "Hello world", })
