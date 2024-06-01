@@ -51,7 +51,12 @@ class ResearchRef(models.Model):
     date_start = models.DateField()
     date_finish = models.DateField(blank=True, null=True)
 
+    def __str__(self):
+        return f'{self.device} {self.describe} {self.status}'
+
     class Meta:
         verbose_name = 'Refrigerator research'
         verbose_name_plural = 'Refrigerator research'
         ordering = ['device', 'status', 'date_start', 'date_finish']
+
+

@@ -28,5 +28,6 @@ router.register(r'researchref', ResearchRefViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('create_research/', views.create_research, name='create_research')
 ]

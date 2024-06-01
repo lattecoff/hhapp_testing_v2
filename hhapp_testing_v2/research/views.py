@@ -9,9 +9,12 @@ from django.shortcuts import render, HttpResponse
 from .models import Category, ResearchRef
 from .serializers import ResearchRefSerializer
 
+from .forms import ResearchRefForm
+
 #Create your views here.
 class ResearchRefViewSet(viewsets.ModelViewSet):
     queryset = ResearchRef.objects.all()
+    serializer_class = ResearchRefSerializer
     serializer_class = ResearchRefSerializer
 
     @action(methods=['get'], detail=False)
@@ -38,4 +41,16 @@ class ResearchRefViewSet(viewsets.ModelViewSet):
 
 def home(request):
     #return HttpResponse('hello world')
-    return render(request, 'index.html', context={})
+    serialized_data = ResearchRef.objects.all()
+    #serialized_data = ResearchRefSerializer
+    return render(request, template_name='index.html', context={"serialized_data": serialized_data})
+
+
+def create_research(request):
+    # if request.method == 'POST':
+    #     pass
+    # else:
+    #     form = ResearchRefForm()
+
+    #return render(request, template_name='create_research.html', context={'hw',})
+    return render(request, template_name='create_research.html', context={'message': "Hello world", })
