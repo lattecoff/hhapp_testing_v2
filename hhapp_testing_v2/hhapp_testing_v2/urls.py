@@ -29,5 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('', views.home, name='home'),
-    path('create_research/', views.create_research, name='create_research')
+    path('create_research/', views.create_research, name='create_research'),
+    path('register/', views.register, name='register'),
+    path('login/', views.register, name='login'),
 ]
