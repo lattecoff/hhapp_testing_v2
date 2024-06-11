@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link rel="stylesheet" href="styles/style.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Research</title>
 </head>
 <body>
-<!--    <div>-->
-<!--        <h1 class="zzz">hello</h1>-->
-<!--    </div>-->
     <div class="reg-block">
         <a href="{% url 'register' %}">Register</a> | <a href="{% url 'login' %}">Login</a>
     </div>
-    <div>
+    <div class="main-column">
         {% block content %}
             {% for key in serialized_data %}
-                {{key.device}}
-                {{key.describe}}
+                <div class="research">
+                    <div class="color-mark"></div>
+                        <span></span>
+                    <div class="text">
+                        <h3>{{key.device}}</h3>
+                        <p>{{key.describe}}</p>
+                    </div>
+                    <div class="date-start">
+                        <p>{{key.date_start}}</p>
+                        <div class="duration">3 day</div>
+                    </div>
+                    <div class="date-finish">
+                        <p>{{key.date_finish}}</p>
+                    </div>
+                    <div class="control">
+                        <p><img src="pen.png" alt="edit" width="25" height="25"></p>
+                        <p><img src="bin.png" alt="delete" width="25" height="25"></p>
+                    </div>
+                </div>
             {% endfor %}
         {% endblock %}
     </div>
-
-
 </body>
 </html>
