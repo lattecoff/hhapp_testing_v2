@@ -1,29 +1,37 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link rel="stylesheet" href="styles/style.css">-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Create Research</title>
 </head>
 <body>
     {{message}}
-    <form action="{% url 'create_research' %}" method="post">
-        {% csrf_token %}
+    <div class="main-column">
+        <form action="{% url 'create_research' %}" method="post">
+            {% csrf_token %}
 
-        {% comment %}
-        {{ form.as_p }}
-        {% endcomment %}
+            {% comment %}
+            {{ form.as_p }}
+            {% endcomment %}
 
-        {{ form.non_field.errors }}
-        {% for field in form %}
-        <div class="form-field">
-            {{ field.label_tag }}
-            {{ field }}
-        </div>
-        {% endfor %}
-
-        <button type="submit">Create Research</button>
-    </form>
+            {{ form.non_field.errors }}
+            {% for field in form %}
+            <div class="form-field">
+                <div class="field-color-mark"></div>
+                    <span></span>
+                <div class="form-text">
+                    {{ field.label_tag }}
+                    {{ field }}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="form-field-button">
+                <button type="submit">Create Research</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
